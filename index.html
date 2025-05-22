@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page</title>
+
+        <style>
+            body {
+                font-family: Arial;
+                background-color: rgb(5, 164, 145);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .container {
+                background-color: white;
+                padding: 50px;
+                border-radius: 14px;
+                justify-items: center;
+            }
+
+            .login-text {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+            input {
+                border: none;
+                border-bottom: 2px;
+                border-bottom-style: solid;
+                outline: none;
+                padding: 5px;
+                width: 240px;
+                margin-bottom: 14px;
+                position: relative;
+            }
+
+            .password-container {
+                position: relative;
+                width: fit-content;
+            }
+
+            .togglePassword {
+                position: absolute;
+                left: 200px;
+                width: 70px;
+            }
+
+            button {
+                background-color: rgb(67, 201, 237);
+                color: white;
+                border: none;
+                padding: 10px 52px;
+                border-radius: 20px;
+                cursor: pointer;
+                margin-bottom: 40px;
+                margin-top: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .password-reset {
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="login-text">Login</div>
+            <p>
+                <input class="username-input" placeholder="Username*">
+            </p>
+            <div class="password-container">
+                <input class="passwordInput" type="password" placeholder="Password*">
+                <input class="togglePassword" type="checkbox"> 
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
+            <div class="password-reset">
+                <a href="www.google.com">Forgot your password?</a>
+            </div>
+            <div>
+                <a href="www.google.com">Sign up</a>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const passwordInput = document.querySelector(".passwordInput");
+        const togglePassword = document.querySelector(".togglePassword");
+
+        togglePassword.addEventListener("change", function () {
+            passwordInput.type = this.checked ? "text" : "password";
+        });
+    </script>
+</html>
